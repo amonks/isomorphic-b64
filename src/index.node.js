@@ -1,5 +1,3 @@
-import { compose } from 'ramda'
-
 /**
  * @name base64.encode
  * @desc
@@ -25,10 +23,7 @@ export const decode = str => (new Buffer(str, 'base64')).toString('utf8')
  * string -> Object
  * ```
  */
-export const deserialize = compose(
-  JSON.parse,
-  decode
-)
+export const deserialize = v => JSON.parse(decode(v))
 
 /**
  * @name base64.serialize
@@ -37,8 +32,5 @@ export const deserialize = compose(
  * Object -> string
  * ```
  */
-export const serialize = compose(
-  encode,
-  JSON.stringify
-)
+export const serialize = v => encode(JSON.stringify(v))
 

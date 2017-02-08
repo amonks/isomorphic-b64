@@ -1,0 +1,27 @@
+{
+  "name": "isomorphic-b64",
+  "version": "0.0.0",
+  "author": "Andrew J. Monks <a@monks.co>",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "babel src -d dist",
+    "test": "ava"
+  },
+  "main": "dist/index.node.js",
+  "browser": "dist/index.browser.js",
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "babel-cli": "^6.22.2",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "ramda": "^0.23.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.22.0"
+  },
+  "repository": "git@github.com:theuprising/isomorphic-b64.git"
+}
